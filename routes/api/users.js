@@ -12,7 +12,7 @@
 'use strict';
 var _ = require('lodash');
 var uuid = require('uuid');
-var testData = populate(10)
+var testData = populate(1000)
 
 module.exports = function(Router, Errors){
 
