@@ -4,6 +4,8 @@
   "description": "A basic angularjs 1.x architecture test.",
   "main": "index.js",
   "scripts": {
+    "docs": "apidoc -i routes/ -o docs/",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/PaperElectron/Angular-Interview-Test/issues"
   },
-  "homepage": "https://github.com/PaperElectron/Angular-Interview-Test"
+  "homepage": "https://github.com/PaperElectron/Angular-Interview-Test",
+  "dependencies": {
+    "apidoc": "^0.13.1",
+    "lodash": "^3.10.1",
+    "pomegranate": "^1.9.0",
+    "uuid": "^2.0.1"
+  },
+  "apidoc": {
+    "title": "Angular architecture test API documentation."
+  }
 }
