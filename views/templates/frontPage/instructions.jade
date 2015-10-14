@@ -1,0 +1,50 @@
+.row
+  .small-12.columns.text-center
+    h1 Angularjs 1.x architecture.
+    h3 Overview
+  .small-12.columns
+
+    p Using AngularJs 1.x best practices, along with ui-router, create several related, dynamic pages
+      | loading data from a remote API. Display the data in a paginated sortable format in one view, while providing
+      | an editing interface for the same data in another.
+.row
+  .large-12.columns
+    h3 Requirements
+    ol
+      li Using ui-router create an abstract child state, inheriting from "main". (hint: Broken link in title bar)
+      li Using ui-router create 2 child states inheriting from the state created above.
+      li Use the 2 child states to display data returned from the API.
+      li Fetch API data, caching it locally.
+      li Update API data both locally and remotely, with changes reflected in the view.
+      li One state should display a sortable, paginated list of API data, with the ability to refresh.
+      li The other state should display the list of API data, with each item individually editable.
+      li Edited data should be persistent locally as well as optionally on the API.
+      li No jQuery.
+
+    h3 Win conditions.
+      ol
+        li Fully modular design, fully reusable components.
+        li Minimal state management. Separation of concerns is key.
+        li Reasonably understandable code without comments.
+        li Prefer functional methods over imperative.
+        li (bonus points) Setup Unit tests with Karma, provide a basic test suite.
+        li (bonus points) Package the app with webpack, or browserify.
+        li (super bonus points) Use Gulp to automate the above.
+
+    h3 Resources
+    ul
+      li You can find the API endpoint documentation by opening
+        code ./docs/index.html
+        |  the API source routes are at
+        code ./routes/api/users
+      li Feel free to create whatever files necessary. They can be loaded in
+        code ./views/scripts.jade
+        |  and will be served from
+        code  http://localhost:8080/js/
+      li Remote templates are available from the server via
+        code http://localhost:8080/render/:directory/:filename
+        |  you can create these templates in
+        code ./views/templates
+      li Css framework is
+        a(href="http://foundation.zurb.com/docs/")  Foundation 5
+        |  No points for style, just there to make it presentable.
