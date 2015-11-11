@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interview APP</title>
+        <!-- Bootstrap Core CSS -->
+        <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Custom CSS -->
+        <link type="text/css" href="css/sb-admin.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link type="text/css" href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
+        <!--script type="text/javascript" src="http://requirejs.org/docs/release/2.1.11/minified/require.js"></script-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+        <script src="js/interview.js"></script>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body ng-app="Interview">
+        <div id="wrapper">
+            
+            <!-- Navigation -->
+            <div ui-view="navigation"></div>
+            <!-- End Navigation -->
+            
+            <div id="page-wrapper">
+                
+                <div class="container-fluid">
+                   
+                     <pre>
+                      hello {{'foo'.length}}
+                      $state = {{$state.current.name}}
+                      $stateParams = {{$stateParams}}
+                      $state full url = {{ $state.$current.url.source }}    
+                    </pre>
+                    
+                    <div ui-view></div>
+                    
+                    <!-- Footer -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div ui-view="footer"></div>
+                        </div>
+                    </div>
+                    <!-- End Footer -->
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+        
+        <!-- jQuery -->
+        <script type="text/javascript" src="../docs/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script type="text/javascript" src="../docs/vendor/bootstrap.min.js"></script>
+        
+        <!-- Controllers -->
+        <script type="text/javascript" src="js/controllers/body.js"></script>
+        <script type="text/javascript" src="js/controllers/nav.js"></script>
+        <script type="text/javascript" src="js/controllers/footer.js"></script>
+        
+        <script type="text/javascript" src="js/bundle.js"></script>
+    </body>
+</html>
